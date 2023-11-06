@@ -1,15 +1,17 @@
 # Restaurant-Mr-Mario
-Ce projet sert a presenter presenter vertuellement un restaurant qui s'appelle Mr Mario au client en utilisant css et html.
+Ce projet sert a  presenter vertuellement un restaurant qui s'appelle Mr Mario au client en utilisant css et html.
 
 # Page D'acceuil 
 
-Qui va etre notre page pricipale une fois vous consulter notre qui contient toutes les information nécessaire pour naviguer dans notre projet
+Qui va etre notre page pricipale une fois vous consulter notre qui contient toutes les informations nécessaire pour naviguer dans notre projet
 
 En commencons par le header qui contient notre logo et notre bare de navigation
 
-## Header qui contient Image daccueil arriere ,logo et barre de navigation 
+## Header qui contient Image daccueil en arriere,logo et barre de navigation 
 ici on a la barre de navigation qui contient d'autre pages( contactez nous...) qui nous permettre de sauter d'une page a une autre avec un logo du restaurant a gauche et qui vont rester avec le meme design dans toutes les autres page, et une petite presentation de restaurant avec une image d'acceuil derriére.
   <img width="946" alt="capture barre de navigation" src="https://github.com/mehdilouchene/Restaurant-Mr-Mario/assets/149451571/ffb103cd-fa83-4a87-a58c-46b6e2a2da2c">
+
+  
 
 ##  le main de Nos offres et les avis de nos clients 
 
@@ -19,6 +21,11 @@ Ici vous pouvez voir qu'on as mis quelques offre sur nos plat (des reductions de
 ## Footer
 
 Ici vous pouvez voir notre footer qui vas rester la meme aussi dans toutes les autres page qui contient le numero de telephone,l'adresse, le lien de mon GitHub et notre signe en bas avec la date et le nom.  <img width="948" alt="capture footer" src="https://github.com/mehdilouchene/Restaurant-Mr-Mario/assets/149451571/127f3cca-e609-4d53-94e8-b7fade8255c2">
+
+## le sub header 
+qui vas contient une autre image en arriere pour les autres page a apart la page d'acceuil comme par mes a chaque fois en change juste le titre comme par example la page a propos de nous 
+
+<img width="947" alt="Screenshot sub header" src="https://github.com/mehdilouchene/Restaurant-Mr-Mario/assets/149451571/85c2f2a5-4d40-493b-abf0-2f51b4108f3e">
 
 
 # A Propos de nous 
