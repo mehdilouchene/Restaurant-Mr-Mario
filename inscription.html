@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mr Mario</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+
 </head>
 
 <body>
@@ -17,9 +20,9 @@
             <nav>
                 <ul>
                     <li><a href="index.html"> Page d'accueil</a></li>
-                    <li><a href="a propos de nous.html"> a Propos de nous</a></li>
-                    <li><a href="notre menu.html"> Notre menu</a></li>
-                    <li><a href="contactez nous.html"> Contactez nous</a></li>
+                    <li><a href="propos.html"> a Propos de nous</a></li>
+                    <li><a href="menu.html"> Notre menu</a></li>
+                    <li><a href="contactez.html"> Contactez nous</a></li>
                     <li><a href="inscription.html"> Inscrivez vous</a></li>
                 </ul>
             </nav>
@@ -28,9 +31,10 @@
         </section> 
         <main>
             <section class="inscription">
+                <h3>Incrivez vous</h3>
                 <div class="container">
-                    <p>Inscrivez-vous et rejoignez notre famille pour avoir accès à toutes les nouveautés de nos plats, les réductions, les événements, les concours, et bien plus encore.</p>
-                    <form action="" method="post">
+                    <p>Rejoignez notre famille pour avoir accès à toutes les nouveautés de nos plats, les réductions, les événements, les concours, et bien plus encore.</p>
+                    <form action="post" method="post">
                         <div class="form-group">
                             <label for="nom">Nom :</label>
                             <input type="text" id="nom" name="nom" required>
@@ -49,21 +53,26 @@
                         </div>
                         <div class="form-group">
                             <label for="mot-de-passe">Confirmez votre Mot de passe :</label>
-                            <input type="password" id="mot-de-passe" name="mot-de-passe" required>
+                            <input type="password" id="confirm-mot-de-passe" name="mot-de-passe" required>
                         </div>
                         <div class="gender">
 
-                            <input type="radio" id="genre" name="genre" value="homme">
+                            <input type="radio" id="genreHomme" name="genre" value="homme">
                             <label for="homme">Homme</label>
-                            <input type="radio" id="genre" name="genre" value="femme">
+                            <input type="radio" id="genreFemme" name="genre" value="femme">
                             <label for="femme">Femme</label>
-                            <input type="radio" id="genre" name="genre" value="autre">
+                            <input type="radio" id="genreAutre" name="genre" value="autre">
                             <label for="autre">Autre</label>
                         </div>
                         <button type="submit">S'inscrire</button>
                     </form>
+                    <div class="error-container"></div>
+
                 </div>
+
+
             </section>
+            
         </main>
 
     <!-- Footer -->
@@ -97,7 +106,8 @@
         <p>Copyright &copy;2023 octobre | designed by <span>Mehdi Louchene</span></p>
      
   </footer>
+
+
 </body>
 </html>
-</body>
-</html>
+

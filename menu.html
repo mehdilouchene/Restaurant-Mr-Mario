@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mr Mario</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-FsMgg7jsyTrzC2okrsV4Ur8BuIaB6IBFVjwGFZ0BF9b2VZTy75N8rqUg8CLV1ft98iwtZcY3ZpQ0lIXKv8OdGQ==" crossorigin="anonymous" referrerpolicy="no-referrer" >
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script src="script.js"></script>
+
 </head>
 
 <body>
@@ -17,18 +21,25 @@
             <nav>
                 <ul>
                     <li><a href="index.html"> Page d'accueil</a></li>
-                    <li><a href="a propos de nous.html"> a Propos de nous</a></li>
-                    <li><a href="notre menu.html"> Notre menu</a></li>
-                    <li><a href="contactez nous.html"> Contactez nous</a></li>
+                    <li><a href="propos.html"> a Propos de nous</a></li>
+                    <li><a href="menu.html"> Notre menu</a></li>
+                    <li><a href="contactez.html"> Contactez nous</a></li>
                     <li><a href="inscription.html"> Inscrivez vous</a></li>
                 </ul>
             </nav>
          </div>   
          <h1>&mdash;Notre menu&mdash;</h1>
+         
         </section> 
+        <div id="panier">
+            <i class="fas fa-shopping-cart panier-icon" id="panier-icon"></i>
+            <p>Total : <span id="panier-total">0$</span></p>
+            <button id="vider-panier">Vider le panier</button>
+        </div>
+        
    <main>
     <div class="menu-item">
-        <img src="image/boulette.jpg">
+        <img src="image/boulette.jpg" alt="boulette">
         <div class="details">
             <div class="details-sub">
                 <h2>Boulette de viande</h2>
@@ -41,7 +52,7 @@
 
     </div>
     <div class="menu-item">
-        <img src="image/bruschetta.jpg">
+        <img src="image/bruschetta.jpg" alt="bruschetta">
         <div class="details">
             <div class="details-sub">
                 <h2>Bruschetta</h2>
@@ -54,11 +65,11 @@
 
     </div>
     <div class="menu-item">
-        <img src="image/calzone.jpg">
+        <img src="image/calzone.jpg" alt="calzone">
         <div class="details">
             <div class="details-sub">
                 <h2>Calzone</h2>
-                <h2><del>20$</del><span class="text-primaire"> 15$</span></h2>
+                <h2><del>20$</del><span class="prix"> 15$</span></h2>
             </div>
             <p>Mozzarella,pepperoni,Champignons, sauce tomate</p>
             <button>Commander</button>
@@ -67,20 +78,20 @@
 
     </div>
     <div class="menu-item">
-        <img src="image/lasagne.jpg">
+        <img src="image/lasagne.jpg" alt="lasagne">
         <div class="details">
             <div class="details-sub">
                 <h2>Lasagne</h2>
-                <h2><del>25$</del><span class="text-primaire"> 20$</span></h2>
+                <h2><del>25$</del><span class="prix"> 20$</span></h2>
             </div>
             <p>Viande hachée,Oignon,Sauce tomate,Mozzarella râpée</p>
-            <button>Commander</button>
+            <button >Commander</button>
 
         </div>
 
     </div>
     <div class="menu-item">
-        <img src="image/linguine.jpg">
+        <img src="image/linguine.jpg" alt="linguine">
         <div class="details">
             <div class="details-sub">
                 <h2>Linguine</h2>
@@ -93,7 +104,7 @@
 
     </div>
     <div class="menu-item">
-        <img src="image/pizza.jpg">
+        <img src="image/pizza.jpg" alt="pizza">
         <div class="details">
             <div class="details-sub">
                 <h2>Pizza Margherita</h2>
@@ -106,11 +117,11 @@
 
     </div>
     <div class="menu-item">
-        <img src="image/soupe.jpg">
+        <img src="image/soupe.jpg" alt="soupe">
         <div class="details">
             <div class="details-sub">
                 <h2>Soupe des rois</h2>
-                <h2><del>12$</del><span class="text-primaire"> 8$</span></h2>
+                <h2><del>12$</del><span class="prix"> 8$</span></h2>
             </div>
             <p>Champignons,Poivre noir,Crème,Poulet</p>
             <button>Commander</button>
@@ -119,7 +130,7 @@
 
     </div>
     <div class="menu-item">
-        <img src="image/teramitsu-cake.jpg">
+        <img src="image/teramitsu-cake.jpg" alt="teramitsu">
         <div class="details">
             <div class="details-sub">
                 <h2>Teramistsu</h2>
@@ -132,7 +143,7 @@
 
     </div>
     <div class="menu-item">
-        <img src="image/ice cream.jpg">
+        <img src="image/ice-cream.jpg" alt="ice-cream">
         <div class="details">
             <div class="details-sub">
                 <h2>Sunday Gelatto</h2>
@@ -178,7 +189,5 @@
         <p>Copyright &copy;2023 octobre | designed by <span>Mehdi Louchene</span></p>
      
   </footer>
-</body>
-</html>
 </body>
 </html>

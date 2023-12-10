@@ -12,15 +12,12 @@ body{
     font-family: 'Quicksand', sans-serif;
 }
 
-ul {
+ul, a {
     list-style: none;
-}
-
-
-
-a {
     text-decoration: none;
+
 }
+
 /* les utiliter des classe*/
 .text-primaire{
     color: chocolate;
@@ -29,7 +26,8 @@ a {
 .header{
     height: 100vh;
     background: url(image/photo\ principale.jpg);
-    position: relative;
+    position:relative;
+    
 
 
 }
@@ -39,6 +37,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 
@@ -65,25 +64,37 @@ a {
 
 }
 
+
 .header .content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 75vh;
-
+    position: relative; /* Ajoutez cette ligne */
+    z-index: 1; /* Ajoutez cette ligne */
 }
+
 .header .content h1{
     font-size: 40px;
     color: white;
 }
-.header .content p{
+.header .content p {
     text-align: center;
     margin-top: 20px;
     margin-left: 200px;
     margin-right: 200px;
     color: white;
+    display: block;
 }
+
+/* Ajoutez ces styles pour les écrans de taille réduite (téléphones et tablettes) */
+@media only screen and (max-width: 768px) {
+    .header .content p {
+        display: none; /* Ajoutez cette ligne pour masquer le paragraphe */
+    }
+}
+
 .header::before{
     content: "";
     position: absolute;
@@ -98,6 +109,81 @@ a {
     z-index: 10;
 }
 
+/* Styles pour les écrans de taille réduite (téléphones et tablettes) */
+@media only screen and (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #navbar img {
+        margin-left: 20px;
+    }
+
+    #navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: #333;
+        text-align: center;
+    }
+
+    #navbar ul.show {
+        display: flex;
+    }
+
+    #navbar ul li {
+        width: 100%;
+        padding: 15px 0;
+        border-bottom: 1px solid #555;
+    }
+
+    #navbar ul li a {
+        color: white;
+    }
+
+    #menu-icon {
+        display: block;
+        cursor: pointer;
+        color: white;
+        font-size: 24px;
+    }
+
+    /* Styles pour la section header sur les petits écrans */
+    .header .content {
+        height: auto;
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    .header::before {
+        background: rgba(0, 0, 0, 0.8);
+    }
+}
+
+/* Styles pour les écrans de taille moyenne (tablettes) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    #navbar img {
+        margin-left: 40px;
+    }
+
+    #navbar ul {
+        margin-right: 40px;
+    }
+}
+
+.header .content.hide {
+    display: none;
+}
+
+#navbar nav.show {
+    display: flex;
+}
+
+
 /*---------------------la section des offres-------------------*/
 .container{
     max-width: 1100px;
@@ -105,12 +191,10 @@ a {
 }
 
 #offres {
-    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: beige;
-   
 }
 #offres.title{
     text-align: center;
@@ -129,12 +213,12 @@ a {
     color:red;
     font-weight: 500;
 }
-#offres .offres-repas{
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
-          color: black;
+#offres .offres-repas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Adjust the gap between items */
 }
 #offres .offres-repas img{
     margin-top: 20px;
@@ -147,20 +231,44 @@ a {
 
 }
 #offres .offres-repas h3{
-    font-size: 25px;
+    font-size: 20px;
     margin: 10px 0;
 }
 #offres .offres-repas p{
     font-size: 14px;
-    padding: 0 20px;
+    padding: 0 10px;
     font-weight: 300;
     margin-bottom: 15px;
 }
 #offres .offres-repas span{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     margin-left: 5px;
 }
+
+
+#offres .offres-repas > div {
+    flex: 0 0 calc(33.33% - 20px); /* Adjust the width of each item, considering the gap */
+    max-width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+}
+
+/* Media query for tablet screens */
+@media only screen and (max-width: 768px) {
+    #offres .offres-repas > div {
+        flex: 0 0 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+/* Media query for phone screens */
+@media only screen and (max-width: 480px) {
+    #offres .offres-repas > div {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
 /*clients avis*/
 
 #clients{
@@ -188,11 +296,16 @@ a {
 }
 #clients .client-avis p{
     padding: 0;
+    margin-bottom: 10px;
 }
 #clients .client-avis h3{
-    margin-top: 15px;
+    margin-top: 10px;
     text-align: left;
 }
+#clients .client-avis:hover {
+    transform: scale(1.1); /* Increase the size when hovered */
+    transition: transform 0.3s ease; /* Add a smooth transition effect */
+  }
 
 
 
@@ -205,7 +318,7 @@ a {
     background-position: center;
     background-size: cover; 
     text-align: center;
-    color: white;
+    color:white;
 }
  .sub-header h1{
      margin-top: 100px; 
@@ -213,6 +326,10 @@ a {
 
 
    .row {
+    color: black;
+    background-image:url(image/chef.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -224,10 +341,7 @@ a {
    flex: 1;
   }
   
-  .image-column img {
-    max-width: 80%;
-    height: auto;
-  }
+
   
   /*--------------------- notre menu-------------------- */
   
@@ -236,7 +350,7 @@ main {
     display: flex;
     flex-wrap: wrap; 
     justify-content: space-around; 
-    margin-top: 30px;
+    margin-top: 100px;
     margin-bottom: 30px;
   }
   
@@ -251,6 +365,7 @@ main {
     max-width: 300px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   }
+  
   
   .menu-item img {
     max-width: 50%;
@@ -279,8 +394,17 @@ main {
   
   button:hover {
     background-color: brown;
+        transform: scale(1.1); /* Increase the size when hovered */
+        transition: transform 0.3s ease; /* Add a smooth transition effect */
   }
-  
+  #panier {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: red;
+    cursor: pointer;
+}
 
   /*-------- contactz nous-------*/
 
@@ -291,6 +415,7 @@ main {
     align-items: center;
     flex-direction: column;
     margin-bottom: 80px;
+    padding-top: 50px;
   }
   .contact .content{
     max-width: 800px;
@@ -313,6 +438,8 @@ main {
     padding: 20px; 
     border-radius: 15px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px; 
+
 }
 .contact-form .inputBox input,
 .contact-form .inputBox textarea {

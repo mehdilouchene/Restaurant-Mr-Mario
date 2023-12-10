@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mr Mario</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+
 </head>
 
 <body>
@@ -17,9 +20,9 @@
             <nav>
                 <ul>
                     <li><a href="index.html"> Page d'accueil</a></li>
-                    <li><a href="a propos de nous.html"> a Propos de nous</a></li>
-                    <li><a href="notre menu.html"> Notre menu</a></li>
-                    <li><a href="contacter.html"> Contactez nous</a></li>
+                    <li><a href="propos.html"> a Propos de nous</a></li>
+                    <li><a href="menu.html"> Notre menu</a></li>
+                    <li><a href="contactez.html"> Contactez nous</a></li>
                     <li><a href="inscription.html"> Inscrivez vous</a></li>
                 </ul>
             </nav>
@@ -31,9 +34,10 @@
         <div class="content">
             <h2>Votre opinion compte</h2>
             <p>N'hésitez pas à nous contacter si vous avez une question, un commentaire, une suggestion ou une réclamation. Nous vous répondrons avec un cœur ouvert en quelques heures seulement.</p>
+
             <div class="contact-form"> <form>
                 <div class="inputBox">
-                    <input type="text" placeholder="Votre Nom" required>
+                    <input type="text" name="nom" placeholder="Votre Nom" required>
                 </div>
                 <div class="inputBox">
                     <input type="email" name="email" placeholder="Votre Email" required>
@@ -85,7 +89,5 @@
         <p>Copyright &copy;2023 octobre | designed by <span>Mehdi Louchene</span></p>
      
   </footer>
-</body>
-</html>
 </body>
 </html>

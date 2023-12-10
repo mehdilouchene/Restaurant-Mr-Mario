@@ -5,21 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mr Mario</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script src="script.js"></script>
+
 </head>
 
 <body>
+<header>
     <!-- la barre de navigation avec le logo, l'image d'accueil et  la petite presentation-->
         <section class="header">
 
          <div id="navbar">
             <img src="./image/logo.jpg" alt="mr mario logo">
+            <div id="menu-icon">&#9776;</div>
             <nav>
                 <ul>
                     <li><a href="index.html"> Page d'accueil</a></li>
-                    <li><a href="a propos de nous.html"> a Propos de nous</a></li>
-                    <li><a href="notre menu.html"> Notre menu</a></li>
-                    <li><a href="contactez nous.html"> Contactez nous</a></li>
+                    <li><a href="propos.html"> a Propos de nous</a></li>
+                    <li><a href="menu.html"> Notre menu</a></li>
+                    <li><a href="contactez.html"> Contactez nous</a></li>
                     <li><a href="inscription.html"> Inscrivez vous</a></li>
                 </ul>
             </nav>
@@ -35,6 +40,7 @@
 
          </div>
          </section>
+        </header>
     <!-- la section des offres-->
     <main>
         <section id="offres">
@@ -81,7 +87,7 @@
            <h2> Qu'est ce que nos clients pense de nous?</h2>
            <div class="row">
             <div class="client-avis">
-                <img src="image/person1.jpg" >
+                <img src="image/person1.jpg" alt="person1" >
 
             <div>
             <p>Un véritable petit coin d'Italie en plein cœur de la ville.
@@ -94,7 +100,7 @@
 
            </div>
            <div class="client-avis">
-            <img src="image/person2.jpg" >
+            <img src="image/person2.jpg" alt="person2" >
 
         <div>
         <p>Le service était incroyablement attentionné. 
@@ -103,8 +109,6 @@
             <h3>Mark</h3>
         </div>
          </div>
-
-       </div>
         </section>
        
     </main>
@@ -140,7 +144,5 @@
         <p>Copyright &copy;2023 octobre | designed by <span>Mehdi Louchene</span></p>
      
   </footer>
-</body>
-</html>
 </body>
 </html>
