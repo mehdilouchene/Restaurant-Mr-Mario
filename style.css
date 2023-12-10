@@ -326,9 +326,6 @@ ul, a {
 
 
    .row {
-    color: black;
-    background-image:url(image/chef.jpg);
-    background-size:cover;
     background-repeat: no-repeat;
     display: flex;
     justify-content: space-between;
