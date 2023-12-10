@@ -338,7 +338,11 @@ ul, a {
    flex: 1;
   }
   
-
+  .image-column img {
+    max-width: 100%;
+    height: 600px;
+    border-radius: 8px
+  }
   
   /*--------------------- notre menu-------------------- */
   

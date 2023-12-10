@@ -127,35 +127,42 @@ $(document).ready(function() {
         // Expression régulière pour vérifier le format de l'email
         var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+        // Variable pour suivre les erreurs de validation
+        var validationError = false;
+
         // Validation du nom
         if (!nomRegex.test(nom)) {
             alert("Veuillez entrer un nom valide (pas de chiffres ni de lettres).");
-            return;
+            validationError = true;
         }
 
         // Validation de l'email
         if (!emailRegex.test(email)) {
             alert("Veuillez entrer une adresse e-mail valide.");
-            return;
+            validationError = true;
         }
 
         // Validation du sujet
         if (sujet.trim() === "") {
             alert("Veuillez entrer un sujet.");
-            return;
+            validationError = true;
         }
 
         // Validation du message
         if (message.trim() === "") {
             alert("Veuillez entrer un message.");
+            validationError = true;
+        }
+
+        // Si des erreurs de validation sont détectées, ne pas afficher le message de succès
+        if (validationError) {
             return;
         }
 
         // Si toutes les validations sont réussies, afficher un message de confirmation
         alert("Formulaire envoyé avec succès !");
-
-        // Réinitialiser le formulaire
         this.reset();
+
     });
 });
 
@@ -166,8 +173,7 @@ $(document).ready(function() {
 //-------------------------Inscription-------------------//
 
 $(document).ready(function () {
-
-    $("form").submit(function (event) {
+    $(document).on('submit', 'form', function (event) {
         event.preventDefault();
 
         var nom = $("#nom").val();
@@ -176,7 +182,6 @@ $(document).ready(function () {
         var motDePasse = $("#mot-de-passe").val();
         var confirmMotDePasse = $("#confirm-mot-de-passe").val();
         var genre = $("input[name='genre']:checked").val();
-
         // Validation des champs
         if (nom === "" || prenom === "" || email === "" || motDePasse === "" || confirmMotDePasse === "" || !genre) {
             alert("Veuillez remplir tous les champs.");
@@ -212,13 +217,11 @@ $(document).ready(function () {
             alert("Votre inscription a été réussie !");
         }
 
-
         console.log("Nom: " + nom);
         console.log("Prénom: " + prenom);
         console.log("Email: " + email);
         console.log("Mot de passe: " + motDePasse);
         console.log("Genre: " + genre);
-
 
         $("form")[0].reset();
     });
